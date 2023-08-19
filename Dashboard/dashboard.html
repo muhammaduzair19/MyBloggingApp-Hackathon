@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&family=Kanit&family=Montserrat:wght@500;700&family=Pacifico&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div id="main">
+        <nav>
+            <div id="top-line">
+                <p>Personal Blogging App</p>
+                <div class="logout-name">
+                    <p id="author-name">Author name</p>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <header id="btm-line">
+                Dashboard
+            </header>
+        </nav>
+        <div id="blog-section">
+            <div id="post-blog">
+                <input id="title" placeholder="Add your title"  type="text">
+                <input id="blog-area" placeholder="Whats on your mind?" type="text">
+                <button id="post" >Post blog</button>
+            </div>
+            <div id="show-blog">
+                <h1>My Blogs</h1>
+                <div id="blog-container">
+                    <div class="top">
+                        <img class="user-img" src="../user.jpg" alt="">
+                        <div class="user-data">
+                            <h2 class="blog-title">It is my first blog ever yes</h2>
+                            <p class="user-name">Uzair Ilyas <span>Date 19/8/2023</span> </p>
+                        </div>
+                    </div>
+                    <div class="blog-space">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi magnam tempore reprehenderit, magni eos hic modi laboriosam ab, numquam aperiam facere consequuntur officiis. Sint provident deleniti veritatis dignissimos vero incidunt, error impedit, minima, pariatur possimus non? Voluptate laborum debitis accusamus vel qui omnis quos deserunt. Nihil qui voluptatibus modi magni eos assumenda, porro aut provident alias, voluptatem maxime quae voluptate, et sit perspiciatis eius exercitationem beatae asperiores facere reiciendis quos vero est eaque facilis! Voluptatum culpa placeat expedita est maiores ut iure. Necessitatibus maxime pariatur qui quam magni reiciendis cupiditate voluptas rerum. Consectetur nisi ipsa voluptate deleniti neque molestias corrupti.
+                    </div>
+                    <div class="controls">
+                        <button class="delete">Delete</button>
+                        <button class="edit">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
