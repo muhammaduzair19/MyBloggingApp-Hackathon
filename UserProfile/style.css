@@ -9,12 +9,12 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Inter', sans-serif;
+    background-color: rgb(237, 237, 237);
 }
 
 #main {
     width: 100%;
     height: 100vh;
-    background-color: rgb(237, 237, 237);
 }
 
 nav {
@@ -52,7 +52,7 @@ nav {
     align-items: center;
     font-size: 3rem;
     font-weight: 700;
-    padding: 0 9vw;
+    padding: 0 12vw;
 }
 
 #btm-line a{
@@ -64,3 +64,99 @@ nav {
     gap: 3vw;
     align-items: center;
 }
+
+
+.blogs {
+    width: 100%;
+    height: calc(100% - 152px);
+    padding: 1vw 5vw 3vw 12vw;
+    display: flex;
+    gap: 5vw;
+}
+#side-data{
+    width: 30%;
+    height: 100vh;
+    /* background: black; */
+    color: white;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    align-items: end;
+}
+#side-data img{
+    width: 90%;
+    border-radius: 30px;
+}
+#side-data p{
+    margin-right: 1vw;
+}
+
+#email{
+    font-size: 1rem;
+    color: black;
+}
+#user-name{
+    color: #7749f8;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#show-blog {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 70%;
+}
+
+#blog-container {
+    min-height: 10vw;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 1vw 2vw;
+
+}
+
+.top {
+    display: flex;
+    gap: 1vw;
+    width: 60%;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user-data h2 {
+    font-size: 1.7rem;
+}
+
+.user-data p {
+    font-size: 1rem;
+}
+
+.top img {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 15px;
+}
+
+.blog-space {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.controls button {
+    font-size: large;
+    background-color: transparent;
+    border: none;
+    color: #7749f8;
+}
+

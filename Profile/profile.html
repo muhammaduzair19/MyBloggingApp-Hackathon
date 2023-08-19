@@ -7,6 +7,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter&family=Kanit&family=Montserrat:wght@500;700&family=Pacifico&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 
 
@@ -29,12 +33,17 @@
         </nav>
         <section class="profile-container">
             <div class="profile-data">
-                <img src="../user.jpg" alt="">
-                <p class="user-name"></p>
+                <div id="img-div">
+                    <img src="../user.jpg" alt="">
+                    <i class="fa-solid fa-pen-clip"></i>
+                </div>
+                <div class="name">
+                    <p class="user-name">Muhammad Uzair</p> <i class="fa-solid fa-pen-clip"></i>
+                </div>
                 <p>Password</p>
-                <input id="old-password"  placeholder="Old password"  type="password">
-                <input id="new-password"  placeholder="Password" type="password">
-                <input id="rnew-password" placeholder="Repeat password"  type="password">
+                <input id="old-password" placeholder="Old password" type="password">
+                <input id="new-password" placeholder="Password" type="password">
+                <input id="rnew-password" placeholder="Repeat password" type="password">
                 <button id="update">Update password</button>
             </div>
 

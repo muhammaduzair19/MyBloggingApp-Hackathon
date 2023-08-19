@@ -9,12 +9,13 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Inter', sans-serif;
+    background-color: rgb(237, 237, 237);
+
 }
 
 #main {
     width: 100%;
     height: 100vh;
-    background-color: black;
 }
 
 nav {
@@ -22,29 +23,31 @@ nav {
     height: 152px;
     background-color: #ffffff;
 }
-#top-line{
+
+#top-line {
     width: 100%;
     height: 40px;
     background: #7749f8;
-    padding: 0 9vw;
+    padding: 0 12vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
 }
 
-#top-line > p{
+#top-line>p {
     font-size: x-large;
     font-weight: 600;
 }
 
-#top-line a{
+#top-line a {
     color: white;
     text-decoration: none;
     font-weight: 600;
     font-size: x-large;
 }
-#btm-line{
+
+#btm-line {
     width: 100%;
     height: calc(100% - 40px);
     background: fff;
@@ -52,10 +55,80 @@ nav {
     align-items: center;
     font-size: 3rem;
     font-weight: 700;
-    padding: 0 9vw;
+    padding: 0 12vw;
 }
-.logout-name{
+
+.logout-name {
     display: flex;
     gap: 3vw;
     align-items: center;
+}
+
+.blogs {
+    width: 100%;
+    height: calc(100% - 152px);
+    padding: 1vw 30vw 3vw 12vw;
+}
+
+#show-blog {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+#blog-container {
+    width: 100%;
+    min-height: 10vw;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 1vw 2vw;
+
+}
+
+.top {
+    display: flex;
+    gap: 1vw;
+    width: 60%;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user-data h2 {
+    font-size: 1.7rem;
+}
+
+.user-data p {
+    font-size: 1rem;
+}
+
+.top img {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 15px;
+}
+
+.blog-space {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.controls button {
+    font-size: large;
+    background-color: transparent;
+    border: none;
+    color: #7749f8;
+}
+
+.controls {
+    display: flex;
+    gap: 1vw;
 }
