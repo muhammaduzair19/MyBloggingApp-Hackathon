@@ -65,7 +65,8 @@ async function addUser(uid) {
         const response = await setDoc(doc(db, "users", uid), {
             firstname: fname.value,
             lastname: lname.value,
-            email: email.value
+            email: email.value,
+            password: password.value
         });
 
         fname.value = '';

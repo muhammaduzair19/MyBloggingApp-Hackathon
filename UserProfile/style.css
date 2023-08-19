@@ -68,7 +68,7 @@ nav {
 
 .blogs {
     width: 100%;
-    height: calc(100% - 152px);
+    min-height: 100%;
     padding: 1vw 5vw 3vw 12vw;
     display: flex;
     gap: 5vw;
@@ -92,7 +92,7 @@ nav {
     margin-right: 1vw;
 }
 
-#email{
+#Email{
     font-size: 1rem;
     color: black;
 }
@@ -110,7 +110,7 @@ nav {
     width: 70%;
 }
 
-#blog-container {
+#blogArea{
     min-height: 10vw;
     background: rgb(255, 255, 255);
     border-radius: 10px;
@@ -153,10 +153,4 @@ nav {
     text-align: justify;
 }
 
-.controls button {
-    font-size: large;
-    background-color: transparent;
-    border: none;
-    color: #7749f8;
-}
 
