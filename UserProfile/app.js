@@ -50,8 +50,8 @@ async function getBlog(uid) {
             console.log(firstname, lastname, email)
             user_name.innerHTML = `${firstname} ${lastname}`
             username.innerHTML = `${firstname} ${lastname}`
-            mailto.innerHTML = email 
-            
+            mailto.innerHTML = email
+
             const date = new Date(time.seconds * 1000 + time.nanoseconds / 1000000);
 
 
@@ -82,6 +82,8 @@ async function getBlog(uid) {
             console.log(blogElement)
 
             blogArea.appendChild(blogElement)
+            localStorage.removeItem('id')
+
         });
     }
     catch (error) {
@@ -89,11 +91,5 @@ async function getBlog(uid) {
     }
 }
 
-function removeLocal(){
-    console.log('working')
-    localStorage.removeItem('id')
-}
 
 
-
-window.removeLocal = removeLocal

@@ -6,6 +6,7 @@ const postbtn = document.getElementById('post')
 const content = document.getElementById('blog-area')
 const blogTitle = document.getElementById('title')
 const blogArea = document.getElementById('blogArea')
+const authorname = document.getElementById('author-name')
 
 
 let currentUser;
@@ -35,15 +36,13 @@ async function userData(uid) {
 
     if (docSnap.exists()) {
 
-        console.log("Document data:", docSnap.data());
         const { firstname, lastname } = docSnap.data();
-        console.log(firstname, lastname)
 
+        authorname.innerHTML = `${firstname} ${lastname}`
         document.querySelector('.user-name').innerHTML = `${firstname} ${lastname}`
         document.querySelector('#author-name').innerHTML = `${firstname} ${lastname}`
 
     } else {
-        // docSnap.data() will be undefined in this case
         console.log("No such document!");
     }
 
@@ -54,7 +53,6 @@ logout.addEventListener('click', logoutHandler);
 function logoutHandler() {
     signOut(auth).then(() => {
         // Sign-out successful.
-        console.log("signout successfully")
         window.location.href = '../login/login.html'
     }).catch((error) => {
         // An error happened.
@@ -83,7 +81,6 @@ async function postBlog() {
 
 
 async function getAuthorData(authorUid) {
-    console.log(authorUid, "=>authorUid")
 
 
     const docRef = doc(db, "users", authorUid);
@@ -117,13 +114,14 @@ async function updateBlog() {
 }
 
 async function editBlog(postId) {
-    console.log(postId, "edit button working properly")
     editFlag = true
     postbtn.innerText = "Update"
+
     postbtn.removeEventListener('click', postBlog)
     postbtn.addEventListener('click', updateBlog)
     globalPostId = postId;
 }
+
 
 async function deleteBlog(postId) {
 
@@ -151,15 +149,11 @@ async function getBlog() {
             let blogId = doc.id
             const { authorId, postContent, time, title } = doc.data()
             console.log(doc.data())
-            console.log(authorId, " ID")
-            console.log(postContent, "postContent")
-            console.log(title, "title")
-            console.log(time, "time")
+           
 
-
+        
 
             const authorDetails = await getAuthorData(authorId)
-            console.log(authorDetails)
             const { firstname, lastname } = authorDetails;
             const date = new Date(time.seconds * 1000 + time.nanoseconds / 1000000);
 
@@ -191,7 +185,6 @@ async function getBlog() {
         </div>`
 
             blogElement.innerHTML = blogContent
-            console.log(blogElement)
             blogArea.appendChild(blogElement)
         });
     }
